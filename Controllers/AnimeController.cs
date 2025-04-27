@@ -18,4 +18,12 @@ public class AnimeController : ControllerBase
         var result = await _jikanService.SearchAnimeAsync(query);
         return Content(result, "application/json");
     }
+
+    [HttpGet("anime/{id}")]
+    public async Task<IActionResult> GetAnime(string id)
+    {
+        var result = await _jikanService.SearchAnimeById(id);
+        return Content(result, "application/json");
+    }
+    
 }

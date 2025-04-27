@@ -17,4 +17,12 @@ public class JikanService
         var content = await response.Content.ReadAsStringAsync();
         return content;
     }
+
+    public async Task<string> SearchAnimeById(string id)
+    {
+        var response = await _httpClient.GetAsync($"anime/{id}");
+        response.EnsureSuccessStatusCode();
+        var content = await response.Content.ReadAsStringAsync();
+        return content;
+    }
 }
