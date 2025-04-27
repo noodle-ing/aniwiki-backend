@@ -1,8 +1,8 @@
-﻿using aniwiki_backend.Services;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using aniwiki_backend.Services;
 
-namespace aniwiki_backend.Controllers;
-
+[ApiController]
+[Route("[controller]")]
 public class AnimeController : ControllerBase
 {
     private readonly JikanService _jikanService;
@@ -13,7 +13,7 @@ public class AnimeController : ControllerBase
     }
 
     [HttpGet("search")]
-    public async Task<IActionResult> SerachAnimeAsync(string query)
+    public async Task<IActionResult> SearchAnime(string query)
     {
         var result = await _jikanService.SearchAnimeAsync(query);
         return Content(result, "application/json");

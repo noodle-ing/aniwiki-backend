@@ -6,6 +6,7 @@ builder.Services.AddHttpClient<JikanService>();
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options =>
@@ -20,6 +21,7 @@ builder.Services.AddCors(options =>
 
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -53,6 +55,8 @@ app.MapGet("/weatherforecast", () =>
 app.UseCors("AllowReactApp");
 
 
+app.UseHttpsRedirection();
+app.MapControllers();
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
