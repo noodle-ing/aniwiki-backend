@@ -40,6 +40,7 @@ public class JikanService
             .Take(10)
             .Select(a => new
             {
+                Id = a["mal_id"].Value<int>() ,
                 Title = a["title"].ToString(),
                 Score = (double)a["score"],
                 Rank = (int)a["rank"],
