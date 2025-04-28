@@ -18,38 +18,38 @@ The project is built using ASP.NET Core Web API with the following structure:
 ## Installation
 
 1. Clone the repository:
-   ```bash
-   git clone <repository-url>
+    ```bash
+    git clone <repository-url>
+    ```
+
 2. Navigate to the project directory:
-   ```cd aniwiki-backend
-   
-3.Install the required packages:
-   ```cd aniwiki-backend and dotnet 8.0
+    ```bash
+    cd aniwiki-backend
+    ```
+
+3. Make sure you have .NET 8.0 installed.
 
 4. Run the application:
-```dotnet run
+    ```bash
+    dotnet run
+    ```
 
-#The application will now be running and ready to handle requests.
+The application will now be running and ready to handle requests.
 
-API Endpoints
-1. Get Anime by ID
+## API Endpoints
 
-    GET /api/anime/{id}
+### 1. Get Anime by ID
 
-    Description: Retrieves detailed information about an anime based on its ID.
+- **GET** `/api/anime/{id}`
+- **Description**: Retrieves detailed information about an anime based on its ID.
 
-2. Get Anime List with Pagination
+### 2. Get Anime List with Pagination
 
-    GET /api/anime?page={pageNumber}
+- **GET** `/api/anime?page={pageNumber}`
+- **Description**: Retrieves a paginated list of anime.
 
-    Description: Retrieves a paginated list of anime.
+## Technologies Used
 
-Technologies Used
-
-    ASP.NET Core Web API: For building the backend services.
-
-    Jikan API: For fetching anime data.
-
-    C#: For the backend logic and services.
-
-   
+- **ASP.NET Core Web API**: For building the backend services.
+- **Jikan API**: For fetching anime data.
+- **C#**: For the backend logic and services.
