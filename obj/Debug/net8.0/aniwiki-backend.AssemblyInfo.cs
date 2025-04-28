@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("aniwiki-backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55e09a1e3de24f9a298e17e4c03a9ed754150917")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d56b78070a5a755fb1a54bdbde5bcab6a0d1a773")]
 [assembly: System.Reflection.AssemblyProductAttribute("aniwiki-backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("aniwiki-backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

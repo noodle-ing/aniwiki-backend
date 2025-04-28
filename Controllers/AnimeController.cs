@@ -26,5 +26,15 @@ public class AnimeController : ControllerBase
         return Content(result, "application/json");
     }
     
+    [HttpGet("top10")]
+    public async Task<IActionResult> GetTop10Anime()
+    {
+        // Получаем топ-10 аниме из сервиса
+        var topAnime = await _jikanService.GetTopAnime();
+
+        // Возвращаем JSON-ответ
+        return new JsonResult(topAnime);
+    }
+    
     
 }

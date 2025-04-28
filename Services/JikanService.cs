@@ -1,4 +1,6 @@
-﻿namespace aniwiki_backend.Services;
+﻿using Newtonsoft.Json.Linq;
+
+namespace aniwiki_backend.Services;
 
 public class JikanService
 {
@@ -27,5 +29,25 @@ public class JikanService
         return content;
     }
     
-    
+    public async Task<List<dynamic>> GetTopAnime()
+    {
+        var response = await _httpClient.GetStringAsync("https://api.jikan.moe/v4/top/anime");
+
+        var jsonResponse = JObject.Parse(response);
+
+        var topAnime = jsonResponse["data"]
+            .OrderByDescending(a => (double)a["score"])
+            .Take(10)
+            .Select(a => new
+            {
+                Title = a["title"].ToString(),
+                Score = (double)a["score"],
+                Rank = (int)a["rank"],
+                ImageUrl = a["images"]["jpg"]["image_url"].ToString(),
+                Synopsis = a["synopsis"]?.ToString() 
+            })
+            .ToList();
+
+        return topAnime.Cast<dynamic>().ToList();
+    }
 }

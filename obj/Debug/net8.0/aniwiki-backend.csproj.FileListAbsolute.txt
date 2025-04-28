@@ -32,3 +32,4 @@ C:\Users\wonde\OneDrive\Рабочий стол\aniwiki-backend\aniwiki-backend\
 C:\Users\wonde\OneDrive\Рабочий стол\aniwiki-backend\aniwiki-backend\obj\Debug\net8.0\aniwiki-backend.pdb
 C:\Users\wonde\OneDrive\Рабочий стол\aniwiki-backend\aniwiki-backend\obj\Debug\net8.0\aniwiki-backend.genruntimeconfig.cache
 C:\Users\wonde\OneDrive\Рабочий стол\aniwiki-backend\aniwiki-backend\obj\Debug\net8.0\ref\aniwiki-backend.dll
+C:\Users\wonde\OneDrive\Рабочий стол\aniwiki-backend\aniwiki-backend\bin\Debug\net8.0\Newtonsoft.Json.dll
