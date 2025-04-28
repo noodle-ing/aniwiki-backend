@@ -10,9 +10,10 @@ public class JikanService
         _httpClient.BaseAddress = new Uri("https://api.jikan.moe/v4/");
     }
 
-    public async Task<string> SearchAnimeAsync(string query)
+
+    public async Task<string> SearchAnimeAsync(string query, int page)
     {
-        var response = await _httpClient.GetAsync($"anime?q={query}");
+        var response = await _httpClient.GetAsync($"anime?q={query}&page={page}");
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
         return content;
@@ -25,4 +26,6 @@ public class JikanService
         var content = await response.Content.ReadAsStringAsync();
         return content;
     }
+    
+    
 }
